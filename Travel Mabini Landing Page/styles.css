@@ -1,0 +1,368 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,500&display=swap");
+
+:root {
+  --primary-color: #1a75c4;
+  --primary-color-dark: #5681a7;
+  --secondary-color: #e8f1fa;
+  --text-dark: #282d31;
+  --text-light: #767268;
+  --extra-light: #f3f4f6;
+  --max-width: 1200px;
+}
+
+/* Reset */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: var(--text-dark);
+  background-color: #fff;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+/* Containers */
+.section__container {
+  padding: 5rem 1rem;
+  max-width: var(--max-width);
+  margin: auto;
+}
+
+.section__title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.section__subtitle {
+  font-size: 1rem;
+  font-style: italic;
+  color: var(--primary-color);
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+/* Navigation */
+nav {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 1.5rem 1rem;
+  width: 100%;
+  max-width: var(--max-width);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav__logo a {
+  text-decoration: none;
+  color: var(--extra-light);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.nav__links {
+  display: none;
+  list-style: none;
+  align-items: center;
+  gap: 2rem;
+}
+
+.link {
+  color: var(--extra-light);
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.link:hover {
+  color: var(--primary-color);
+}
+
+/* Header */
+header {
+  height: 100vh;
+  background-image: linear-gradient(
+      rgba(45, 92, 132, 0.6),
+      rgba(45, 92, 132, 0.6)
+    ),
+    url("img 3.jfif");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header .section__container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  color: var(--extra-light);
+  text-align: center;
+}
+
+.header__content h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.header__content p {
+  font-size: 1.1rem;
+}
+
+.header__content button {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 6px;
+  background-color: var(--primary-color);
+  color: var(--extra-light);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.header__content button:hover {
+  background-color: var(--primary-color-dark);
+}
+
+/* Journey (Travel Pictures) */
+.journey__container {
+  background-color: var(--secondary-color);
+}
+
+.journey__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.country__card {
+  background-color: var(--extra-light);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.country__card:hover {
+  transform: translateY(-5px);
+}
+
+.country__card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.country__name {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-light);
+  font-size: 0.95rem;
+  font-style: italic;
+  cursor: pointer;
+}
+
+/* Banner */
+.banner__container {
+  background-image: linear-gradient(
+      rgba(35, 71, 103, 0.6),
+      rgba(35, 71, 103, 0.6)
+    ),
+    url("img 2.jfif");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.banner__container .section__container {
+  padding: 8rem 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.banner__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+  text-align: center;
+  color: var(--extra-light);
+}
+
+.banner__content h2 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.banner__content button {
+  padding: 0.6rem 2rem;
+  border: 2px solid var(--secondary-color);
+  background: transparent;
+  color: var(--secondary-color);
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+.banner__content button:hover {
+  background: var(--secondary-color);
+  color: var(--text-dark);
+}
+
+/* Display Section */
+.display__container {
+  background-color: var(--secondary-color);
+}
+
+.display__container :is(.section__title, .section__subtitle) {
+  color: var(--text-dark);
+}
+
+.display__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.display__card {
+  background-color: var(--extra-light);
+  padding: 2rem 1rem;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.display__card:hover {
+  transform: translateY(-5px);
+}
+
+.display__card i {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.display__card h4 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+.display__card p {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  margin-top: 0.5rem;
+}
+
+/* Footer */
+footer {
+  background-color: var(--text-dark);
+  color: var(--secondary-color);
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+footer h4 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.social__icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.social__icons i {
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.social__icons i:hover {
+  color: var(--primary-color);
+}
+
+footer p {
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (min-width: 640px) {
+  .nav__links {
+    display: flex;
+  }
+
+  header .section__container {
+    justify-content: flex-start;
+  }
+
+  .header__content {
+    max-width: 450px;
+    text-align: left;
+    align-items: flex-start;
+  }
+}
+
+@media (min-width: 768px) {
+  .banner__container .section__container {
+    justify-content: flex-end;
+  }
+
+  .banner__content {
+    align-items: flex-end;
+    text-align: right;
+    max-width: 700px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header__content h1 {
+    font-size: 5rem;
+  }
+
+  .country__card img {
+    height: 260px;
+  }
+
+  .display__card i {
+    font-size: 2.5rem;
+  }
+
+  .display__card h4 {
+    font-size: 1.4rem;
+  }
+
+  .display__card p {
+    font-size: 1rem;
+  }
+}
