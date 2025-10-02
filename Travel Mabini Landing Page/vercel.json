@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "index.html", "use": "@vercel/static" }
+  ],
+  "routes": [
+    { "src": "/", "dest": "/index.html" },
+    { "src": "/places", "dest": "/places/places_to_visit.html" },
+    { "src": "/overview", "dest": "/overview/destination-overview.html" },
+    { "src": "/info", "dest": "/info/practical-info.html" }
+  ],
+  "cleanUrls": true
+}
